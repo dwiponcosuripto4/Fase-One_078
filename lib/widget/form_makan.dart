@@ -38,9 +38,8 @@ class _MakanFormState extends State<MakanForm> {
           ),
           TextFormField(
             controller: widget.etminum,
-            keyboardType: TextInputType.phone,
             decoration: const InputDecoration(
-              labelText: 'hp',
+              labelText: 'Minuman',
               hintText: "Masukkan Pesanan",
               prefixIcon: Icon(Icons.no_drinks),
             ),
