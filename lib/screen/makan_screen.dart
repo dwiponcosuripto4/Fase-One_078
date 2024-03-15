@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:ucp1/screen/detail_screen.dart';
+import 'package:ucp1/widget/footer_makan.dart';
+import 'package:ucp1/widget/form_makan.dart';
 
 class MakanScreen extends StatelessWidget {
-  const MakanScreen({super.key, required this.nama});
+  const MakanScreen({super.key, required this.nama, required this.hp});
 
   final String nama;
+  final String hp;
   @override
   Widget build(BuildContext context) {
+    var makan = TextEditingController();
+    var minum = TextEditingController();
+    var dessert = TextEditingController();
+    var formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
         title: Text("Home Screen"),
@@ -14,7 +22,36 @@ class MakanScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Hello, $nama"),
+            SizedBox(height: 20),
+            Text('Nama: $nama'),
+            Text('Nomor HP: $hp'),
+            SizedBox(height: 20),
+            Expanded(
+                  child: MakanForm(
+                    formKey: formKey,
+                    etmakan: makan,
+                    etminum: minum,
+                    etdessert: dessert
+                  ),
+                ),
+            FooterMakan(
+                  onPressContinue: () {
+                    if (formKey.currentState!.validate()) {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailScreen(makan: makan.text),
+                          ),
+                          (route) => false);
+                          
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Silahkan pilih menu"),
+                        ),
+                      );
+                    }
+                  },
+                ),
           ],
         ),
       ),

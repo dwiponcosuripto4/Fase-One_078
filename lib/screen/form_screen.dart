@@ -38,7 +38,7 @@ class DataForm extends StatelessWidget {
                       Navigator.pushAndRemoveUntil(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => MakanScreen(nama: nama.text),
+                            builder: (context) => MakanScreen(nama: nama.text, hp: hp.text),
                           ),
                           (route) => false);
                           
