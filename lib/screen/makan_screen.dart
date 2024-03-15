@@ -16,7 +16,7 @@ class MakanScreen extends StatelessWidget {
     var formKey = GlobalKey<FormState>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Screen"),
+        title: Text("Data Makanan"),
       ),
       body: Center(
         child: Column(

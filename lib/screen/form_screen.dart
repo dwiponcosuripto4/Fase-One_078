@@ -16,6 +16,7 @@ class DataForm extends StatelessWidget {
     var formKey = GlobalKey<FormState>();
 
     return Scaffold(
+      
       body: SafeArea(
         child: Center(
           child: Padding(
