@@ -1,16 +1,6 @@
-# ucp1
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Data Form:
+![Screenshot 2024-03-15 214801](https://github.com/dwiponcosuripto4/Fase-One_078/assets/115076093/fcde7333-bca0-478a-bb2f-39260ee06906)
+Data Makanan:
+![Screenshot 2024-03-15 214837](https://github.com/dwiponcosuripto4/Fase-One_078/assets/115076093/69dee559-63ed-4ee5-88a1-eda0f0e90923)
+Detail Form:
+![Screenshot 2024-03-15 214850](https://github.com/dwiponcosuripto4/Fase-One_078/assets/115076093/15ff18dd-e2ea-49a9-86db-7ee366ffec96)
