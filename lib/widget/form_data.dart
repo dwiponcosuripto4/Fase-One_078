@@ -72,33 +72,48 @@ class _FormWidgetState extends State<FormWidget> {
               return null;
             },
           ),
-          ListTile(
-                title: const Text('Laki-laki'),
-                leading: Radio<String>(
-                  value: 'Laki-laki',
-                  groupValue: _gender,
-                  onChanged: (value) {
-                    setState(() {
-                      _gender = value;
-                      widget.etgender.text = value!;
-                    });
-                  },
-                ),
+          Column(
+            children: [
+              Row(
+                children: [
+                  Text(
+                  'Jenis Kelamin:',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                              ),
+                ],
               ),
-              ListTile(
-                title: const Text('Perempuan'),
-                leading: Radio<String>(
-                  value: 'Perempuan',
-                  groupValue: _gender,
-                  onChanged: (value) {
-                    setState(() {
-                      _gender = value;
-                      widget.etgender.text = value!;
-                    });
-                  },
-                ),
+              Row(
+                children: [
+                  
+                  Radio<String>(
+                    value: 'Laki-laki',
+                    groupValue: _gender,
+                    onChanged: (value) {
+                      setState(() {
+                        _gender = value;
+                        widget.etgender.text = value!;
+                      });
+                    },
+                  ),
+                  Text('Laki-laki'),
+                  Radio<String>(
+                    value: 'Perempuan',
+                    groupValue: _gender,
+                    onChanged: (value) {
+                      setState(() {
+                        _gender = value;
+                        widget.etgender.text = value!;
+                      });
+                    },
+                  ),
+                  Text('Perempuan'),
+                ],
               ),
-          
+            ],
+          ),
         ],
       ),
     );
