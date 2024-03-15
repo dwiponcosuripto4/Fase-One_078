@@ -27,31 +27,36 @@ class MakanScreen extends StatelessWidget {
             Text('Nomor HP: $hp'),
             SizedBox(height: 20),
             Expanded(
-                  child: MakanForm(
-                    formKey: formKey,
-                    etmakan: makan,
-                    etminum: minum,
-                    etdessert: dessert
-                  ),
-                ),
+              child: MakanForm(
+                  formKey: formKey,
+                  etmakan: makan,
+                  etminum: minum,
+                  etdessert: dessert),
+            ),
             FooterMakan(
-                  onPressContinue: () {
-                    if (formKey.currentState!.validate()) {
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DetailScreen(makan: makan.text),
-                          ),
-                          (route) => false);
-                          
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content: Text("Silahkan pilih menu"),
-                        ),
-                      );
-                    }
-                  },
-                ),
+              onPressContinue: () {
+                if (formKey.currentState!.validate()) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => DetailScreen(
+                        nama: nama,
+                        hp: hp,
+                        makan: makan.text,
+                        minum: minum.text,
+                        dessert: dessert.text,
+                      ),
+                    ),
+                  );
+
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Silahkan pilih menu"),
+                    ),
+                  );
+                }
+              },
+            ),
           ],
         ),
       ),
