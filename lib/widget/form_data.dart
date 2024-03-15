@@ -60,6 +60,7 @@ class _FormWidgetState extends State<FormWidget> {
           ),
           TextFormField(
             controller: widget.etalamat,
+            maxLines: null,
             decoration: const InputDecoration(
               labelText: 'alamat',
               hintText: "Masukan alamat",
